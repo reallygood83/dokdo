@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>독도교육 (1~4학년용)</title>
+  <style>
+    /* 전역 스타일 */
+    body {
+      margin: 0; 
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #ffe4e1;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: #333;
+    }
+    header img {
+      height: 40px; 
+      width: auto;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+    main {
+      max-width: 1200px;
+      margin: 1rem auto;
+      padding: 0 1rem;
+    }
+
+    /* 영상영역, 퀴즈 박스 (이전과 유사) */
+    .video-section {
+      margin-bottom: 3rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .video-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      margin-bottom: 1rem;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border-radius: 10px;
+    }
+    .quiz-box { margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+    .quiz-question { margin-bottom: 1rem; }
+    .quiz-options label { display: inline-block; margin-bottom: 0.5rem; }
+    .quiz-result { margin-top: 0.5rem; font-weight: bold; }
+    .btn-quiz {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 20px;
+      background-color: #ffd1dc;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    .btn-quiz:hover { background-color: #ffb6c1; }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 + 네비게이션 -->
+  <header>
+    <nav>
+      <!-- 로고 or 홈 링크 -->
+      <a href="index.html">
+        <img src="mycharacter.png" alt="배움의 달인 로고"/>
+      </a>
+      <!-- 페이지 간 이동 링크 -->
+      <a href="upper.html">5~6학년용</a>
+      <a href="index.html">메인</a>
+    </nav>
+    <h1>독도교육 (1~4학년용)</h1>
+  </header>
+
+  <main>
+    <!-- 영상 #1 -->
+    <section class="video-section" id="video1_1">
+      <h2>영상 1</h2>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
+          title="독도교육 영상 (1~4학년용 #1)" 
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- 퀴즈 박스 (5문항 예시) -->
+      <div class="quiz-box">
+        <h3>퀴즈 (5문항)</h3>
+        <!-- 문항 예시 -->
+        <div class="quiz-question">
+          <p>1. 질문 내용을 작성하세요</p>
+          <div class="quiz-options">
+            <label><input type="radio" name="vid1-1-q1" value="1"> 보기1</label><br/>
+            <label><input type="radio" name="vid1-1-q1" value="2"> 보기2</label><br/>
+            <label><input type="radio" name="vid1-1-q1" value="3"> 보기3</label><br/>
+            <label><input type="radio" name="vid1-1-q1" value="4"> 보기4</label><br/>
+          </div>
+          <p id="vid1-1-q1-result" class="quiz-result"></p>
+        </div>
+        <!-- ... 문항2~5 ... -->
+        <button class="btn-quiz" onclick="checkVideo11Quiz()">퀴즈 제출</button>
+      </div>
+    </section>
+
+    <!-- 영상 #2 -->
+    <section class="video-section" id="video1_2">
+      <h2>영상 2</h2>
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+          title="독도교육 영상 (1~4학년용 #2)" 
+          frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <div class="quiz-box">
+        <h3>퀴즈 (5문항)</h3>
+        <!-- 문항 예시 -->
+        <button class="btn-quiz" onclick="checkVideo12Quiz()">퀴즈 제출</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI활용 코딩을 함께하실 분들과 소통하고 싶습니다.^^ 
+      <a href="https://open.kakao.com/o/gubGYQ7g" target="_blank">오픈채팅방 바로가기</a>
+    </p>
+    <p>&copy; 유튜브 배움의달인 김문정</p>
+  </footer>
+
+  <!-- 퀴즈 체크용 JS (이전 예시와 동일한 로직) -->
+  <script>
+    function checkVideo11Quiz() {
+      // 문항별 체크 로직...
+    }
+    function checkVideo12Quiz() {
+      // 문항별 체크 로직...
+    }
+  </script>
+</body>
+</html>
