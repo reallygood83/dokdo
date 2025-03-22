@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>독도교육 메인</title>
+  <style>
+    body {
+      margin: 0; 
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* 화면 꽉 차게 */
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .link-box {
+      display: flex;
+      gap: 1rem;
+    }
+    .link-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #ffd1dc;
+      color: #333;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    .link-btn:hover {
+      background-color: #ffb6c1;
+    }
+    /* 간단한 반응형 */
+    @media (max-width: 480px) {
+      .link-box {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>독도교육 메인</h1>
+  <p>학년별 페이지를 선택하세요</p>
+
+  <div class="link-box">
+    <a href="lower.html" class="link-btn">1~4학년용</a>
+    <a href="upper.html" class="link-btn">5~6학년용</a>
+  </div>
+</body>
+</html>
