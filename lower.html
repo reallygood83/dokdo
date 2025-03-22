@@ -246,12 +246,89 @@
 
   <!-- 퀴즈 체크용 JS (이전 예시와 동일한 로직) -->
   <script>
-    function checkVideo11Quiz() {
-      // 문항별 체크 로직...
+    function checkVideo21Quiz() {
+      // 문항1
+  const q1Answers = document.getElementsByName("vid1-1-q1"); 
+  const q1Result = document.getElementById("vid1-1-q1-result");
+  const correctQ1 = "1"; // 예) "1"번 보기가 정답
+  checkOneQuestion(q1Answers, correctQ1, q1Result);
+
+  // 문항2
+  const q2Answers = document.getElementsByName("vid1-1-q2");
+  const q2Result = document.getElementById("vid1-1-q2-result");
+  const correctQ2 = "2"; // 예) "2"번이 정답
+  checkOneQuestion(q2Answers, correctQ2, q2Result);
+      
+  // 문항3
+  const q3Answers = document.getElementsByName("vid1-1-q3");
+  const q3Result = document.getElementById("vid1-1-q3-result");
+  const correctQ3 = "3"; // 예) "3"번이 정답
+  checkOneQuestion(q3Answers, correctQ3, q3Result);
+
+  // 문항4
+  const q4Answers = document.getElementsByName("vid1-1-q4");
+  const q4Result = document.getElementById("vid1-1-q4-result");
+  const correctQ4 = "4"; // 예) "4"번이 정답
+  checkOneQuestion(q4Answers, correctQ4, q4Result);    
+
+  // 문항5
+  const q5Answers = document.getElementsByName("vid1-1-q5");
+  const q5Result = document.getElementById("vid1-1-q5-result");
+  const correctQ5 = "2"; // 예) "2"번이 정답
+  checkOneQuestion(q5Answers, correctQ5, q5Result);    
     }
-    function checkVideo12Quiz() {
-      // 문항별 체크 로직...
+    
+    function checkVideo22Quiz() {
+         // 문항1
+  const q1Answers = document.getElementsByName("vid1-2-q1"); 
+  const q1Result = document.getElementById("vid1-2-q1-result");
+  const correctQ1 = "2"; // 예) "2"번 보기가 정답
+  checkOneQuestion(q1Answers, correctQ1, q1Result);
+
+  // 문항2
+  const q2Answers = document.getElementsByName("vid1-2-q2");
+  const q2Result = document.getElementById("vid1-2-q2-result");
+  const correctQ2 = "3"; // 예) "3"번이 정답
+  checkOneQuestion(q2Answers, correctQ2, q2Result);
+      
+  // 문항3
+  const q3Answers = document.getElementsByName("vid1-2-q3");
+  const q3Result = document.getElementById("vid1-2-q3-result");
+  const correctQ3 = "4"; // 예) "4"번이 정답
+  checkOneQuestion(q3Answers, correctQ3, q3Result);
+
+  // 문항4
+  const q4Answers = document.getElementsByName("vid1-2-q4");
+  const q4Result = document.getElementById("vid1-2-q4-result");
+  const correctQ4 = "3"; // 예) "3"번이 정답
+  checkOneQuestion(q4Answers, correctQ4, q4Result);    
+
+  // 문항5
+  const q5Answers = document.getElementsByName("vid1-2-q5");
+  const q5Result = document.getElementById("vid1-2-q5-result");
+  const correctQ5 = "3"; // 예) "3"번이 정답
+  checkOneQuestion(q5Answers, correctQ5, q5Result);    
     }
+    // 공통함수 (문항 하나를 체크하는 로직)
+function checkOneQuestion(radioNodeList, correctValue, resultElement) {
+  let selectedValue = "";
+  for (let i = 0; i < radioNodeList.length; i++) {
+    if (radioNodeList[i].checked) {
+      selectedValue = radioNodeList[i].value;
+      break;
+    }
+  }
+  if (!selectedValue) {
+    resultElement.textContent = "답을 선택하세요!";
+    resultElement.style.color = "red";
+  } else if (selectedValue === correctValue) {
+    resultElement.textContent = "정답입니다!";
+    resultElement.style.color = "green";
+  } else {
+    resultElement.textContent = "오답입니다. 다시 생각해보세요!";
+    resultElement.style.color = "red";
+  }
+}
   </script>
 </body>
 </html>
